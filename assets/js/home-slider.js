@@ -198,3 +198,38 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+// WHY CHOOSE US 
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".choose-card");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+
+// EXTRA CONTENT 
+document.addEventListener("DOMContentLoaded", function() {
+  const blocks = document.querySelectorAll(".info-block");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  blocks.forEach(block => observer.observe(block));
+});
+
+
