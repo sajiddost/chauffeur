@@ -1,0 +1,264 @@
+/* ================================
+   Global Theme Styles
+   Luxury Website Look
+   Colors: Gold (#d0a741), Black (#000000), Light Gray (#eeeeee)
+   Font: Lora
+================================= */
+/* Google Fonts: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --lux-gold: #d0a741;
+  --lux-black: #000000;
+  --lux-light: #ffff;
+  --dark-bg: #111;
+  --card-bg: #1c1c1c;
+  --light-text: #f5f5f5;
+  --muted-text: #bbb;
+  --transition-speed: 0.3s;
+  --border-radius: 8px;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--lux-black);
+  color: var(--lux-light);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  color: var(--lux-gold);
+  font-weight: 600;
+  margin: 0 0 15px;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+p {
+  margin: 0 0 20px;
+  color: var(--lux-light);
+}
+a {
+  color: var(--lux-gold);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   GLOBAL CTA BUTTON
+========================= */
+.btn-outline,
+.btn-primary {
+  display: inline-block;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Outline Style */
+.btn-outline {
+  border: 2px solid var(--lux-gold, #d0a741);
+  background: transparent;
+  color: var(--lux-gold, #d0a741);
+}
+
+.btn-outline:hover {
+  background: var(--lux-gold, #d0a741);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Filled Golden Button */
+.btn-primary {
+  background: linear-gradient(135deg, #a67c00, #d4af37, #ffd700);
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d4af37, #ffd700, #fff8dc);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Optional arrow animation inside button */
+.btn-outline i,
+.btn-primary i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-outline:hover i,
+.btn-primary:hover i {
+  transform: translateX(5px);
+}
+
+
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header-inner{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li{
+    padding: 25px 0;
+}
+nav .dropdown{position: relative; }
+nav .dropdown-menu{
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem;
+    width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    display: none;
+}
+nav li a{
+    color: #fff;
+}
+.lux-logo{text-align: center;}
+.lux-right{text-align: end;}
+.dropdown-menu a{color: var(--lux-black);}
+.dropdown-menu li{
+    padding: 10px 15px; 
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+    overflow: hidden;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu li:hover{
+    background-color: var(--lux-gold);
+}
+
+.dropdown-menu li i {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease-in-out;
+  width: 0;            /* collapse width */
+  overflow: hidden;    /* hide content */
+}
+
+.dropdown-menu li:hover i {
+  opacity: 1;
+  transform: translateX(0);
+  width: 16px;         /* give icon its natural width */
+}
+.phone{
+    padding: 10px 15px;
+    color: #fff;
+}
+.mobile-menu, .mobile-nav{display: none;}
+nav ul{padding: 0;}
+
+/* =========================
+   HEADER
+========================= */
+
+@media screen and (max-width: 768px){
+    .container{width: 100%;}
+    nav{display: none;}
+    .lux-logo img{
+        width: 80px;
+    }
+    .lux-right button{display: none;}
+    .header-inner{grid-template-columns: 1fr 2fr 0.5fr;}
+    .lux-right{order: 2; text-align: end;}
+    .lux-logo{order: 1}
+    .mobile-nav{order: 3;}
+    .phone span{display: none;}
+    .phone i{
+        background: var(--lux-gold);
+        padding: 10px;
+        border-radius: 100px;
+    }
+    .phone{
+        border: 1px solid var(--lux-gold);
+        border-radius: 100px;
+        padding: 10px 15px 10px 3px;
+        margin-right: 10px;
+    }
+    .mobile-nav{display: block;}
+    .mobile-nav i{
+        background: var(--lux-gold);
+        padding: 12px 12.5px;
+        border-radius: 100px;
+        border: 1px solid var(--lux-gold);
+        color: #fff;
+    }
+    .mobile-nav .fa-xmark:hover{
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 12px 14px !important;
+    }
+    .mobile-menu{
+        width: 100%;
+        height: auto;
+        background: #ffffff10;
+        border: 1px solid #eeeeee50;
+        border-radius: 10px;
+    }
+    .mobile-menu ul{
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0;
+        gap: 0px;
+    }
+    .mobile-menu ul li{
+        padding: 5px;
+    }
+    .dropdown-menu{
+        position: relative;
+    }
+    .mobile-nav{
+        text-align: end;
+    }
+    header{padding: 10px;}
+    .lux-logo img{text-align: left; width: 60px;}
+    .mob-dropdown-menu i{display: none;}
+    
+}

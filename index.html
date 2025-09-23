@@ -1,0 +1,402 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chauffeur Now</title>
+      <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!-- Font Awesome 6.6.0 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+     <!-- HEADER -->
+  <header class="lux-header">
+    <div class="container header-inner">
+      
+      <!-- Navigation Left -->
+      <nav class="lux-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          
+          <!-- Services Dropdown -->
+          <li class="dropdown">
+            <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> VIP Chauffeur</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Dubai City Tour</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Hourly Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Monthly Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Corporate Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Inter Emitrates Travel</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> School Pickup & Drop off</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Airport Pickup & Drop off</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logo Center -->
+      <div class="lux-logo">
+        <img src="assets/img/logo.png" alt="logo">
+      </div>
+
+      <!-- Right Side: Phone + Button -->
+      <div class="lux-right">
+        <a href="tel:+971 52 295 0066" class="phone"><i class="fa-solid fa-phone"></i> <span>+971</span> 52 295 0066</a>
+        <button class="btn-outline">Book Now</button>
+      </div>
+
+      <div class="mobile-nav">
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+      </div>
+    </div>
+    <nav class="mobile-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          
+          <!-- Services Dropdown -->
+          <li class="mob-dropdown">
+            <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mob-dropdown-menu">
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> VIP Chauffeur</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Dubai City Tour</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Hourly Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Monthly Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Corporate Driver</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Inter Emitrates Travel</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> School Pickup & Drop off</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Airport Pickup & Drop off</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+<section class="lux-slider">
+  <div class="slider-container">
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <div class="slide-left">
+        <h2>Luxury Chauffeur Services Across Dubai</h2>
+        <p>Indulge in unmatched comfort and elegance with our professional chauffeurs. From airport transfers to exclusive events, we ensure every ride is first-class.</p>
+        <button class="btn-outline">Book Now <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="slide-right">
+        <img src="assets/img/rangover.webp" alt="Luxury Car">
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="slide-left">
+        <h2>Explore Dubai Like Never Before</h2>
+        <p>Step into a world of elegance as you explore Dubai’s breathtaking skyline, golden deserts, and cultural landmarks. Our professional chauffeurs ensure a smooth, stylish journey while you sit back and enjoy the city’s most iconic sights in absolute comfort.</p>
+        <button class="btn-outline">Start Your Tour <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="slide-right">
+        <img src="assets/img/crolla.webp" alt="City Tour Car">
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="slide-left">
+        <h2>Airport Transfers, Redefined in Luxury</h2>
+        <p>Arrive relaxed and on time with our premium airport transfer service. Our chauffeurs track your flight, handle your luggage, and ensure a seamless journey — whether you’re departing in style or being welcomed to Dubai in absolute comfort.</p>
+        <button class="btn-outline">Reserve Now <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="slide-right">
+        <img src="assets/img/mitsubishi.webp" alt="Airport Car">
+      </div>
+    </div>
+
+    <!-- Navigation + Pagination -->
+    <div class="slider-controls">
+      <div class="slider-dots"></div>
+      <div class="slider-nav">
+        <span class="prev"><i class="fa-solid fa-chevron-left"></i></span>
+        <span class="next"><i class="fa-solid fa-chevron-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========================== 4-step booking process =============================== -->
+<!-- How it Works Section -->
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works?</h2>
+    <div class="how-grid">
+      <div class="how-card" data-step="1">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h3>Book Online</h3>
+        <p>Select your service and confirm your booking in just a few clicks.</p>
+      </div>
+      <div class="how-card" data-step="2">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Pick Location</h3>
+        <p>Enter your pickup location for a smooth, hassle-free experience.</p>
+      </div>
+      <div class="how-card" data-step="3">
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Meet Your Driver</h3>
+        <p>Your professional chauffeur arrives on time, ready to serve.</p>
+      </div>
+      <div class="how-card" data-step="4">
+        <i class="fa-solid fa-credit-card"></i>
+        <h3>Pay Easily</h3>
+        <p>Choose cash or card — flexible options, every ride.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ====================================================================== -->
+ <!-- Chauffeur Services Section -->
+<section class="chauffeur-section">
+  <div class="container">
+    <div class="chauffeur-content" data-aos="fade-right">
+      <h1>Professional Safe Drivers & Chauffeurs in Dubai</h1>
+      <p>
+        We are also registered at the Roads and Transport Authority of Dubai and we provide safe driver services in Dubai and Abu Dhabi at Chauffeurs Now, which are trusted and of high quality. You may hire a certified chauffeur to get to your office safely every day, take you to shopping malls, weekend outing, or just get you to the airport and back home safely and without stress after a late party, our professional drivers will make sure you have an enjoyable ride.
+      </p>
+      <p>
+In Dubai or Abu Dhabi, it is easy to hire a car with a driver at low prices at low prices and with the option of flexibilities to suit your lifestyle. Our chauffeurs are courteous, on time and committed towards ensuring that you receive a high quality travel experience at all times.
+      </p>
+      <ul class="chauffeur-list">
+        <li><i class="fa-solid fa-shield-halved"></i> Get where you are going in a safe and comfortable way.</li>
+        <li><i class="fa-solid fa-calendar-check"></i> Book safely every day, every week, or every month.</li>
+        <li><i class="fa-solid fa-map-marker-alt"></i> Reach your destination safely and comfortably.</li>
+        <li><i class="fa-solid fa-user-tie"></i> Enjoy the peace of mind of a certified chauffeur.</li>
+      </ul>
+      <button class="btn-outline">Book Now <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="chauffeur-image" data-aos="fade-left">
+      <img src="assets/img/Professional Safe Drivers & Chauffeurs in Dubai.webp" alt="Professional Safe Drivers & Chauffeurs in Dubai">
+    </div>
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+ <!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <h2>Rent a Professional Driver by the Day</h2>
+      <p>Your trip is our perfect package, so reserve your Dubai driver now and enjoy safe, stress-free travel.</p>
+      <a href="#booking" class="cta-btn">Reserve Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================== -->
+<!-- Pricing Section with carousel -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="pricing-header">
+      <div>
+        <h2>Hire a driver on a weekly or monthly basis with ease.</h2>
+        <p>Our customized packages are designed to match your travel needs — book your professional driver in Dubai today!</p>
+      </div>
+      <div class="pricing-nav">
+        <button class="pricing-prev prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="pricing-next next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="pricing-carousel">
+      <div class="pricing-track">
+        <!-- Pricing Card -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Weekly Driver</h3>
+            <span class="badge">Popular</span>
+          </div>
+          <div class="pricing-card-body">
+            <p>School Pick up and drop off service 5 days a week, 6 hours a day.</p>
+            <ul class="key-benefits">
+              <li><i class="fa-solid fa-check"></i> Drivers know all routes in Dubai</li>
+              <li><i class="fa-solid fa-check"></i> Affordability, no shocking costs</li>
+              <li><i class="fa-solid fa-check"></i> Loyalty & Value</li>
+              <li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+            </ul>
+            <p class="note">NOTE: Extra 30 AED/Hour if it takes extra time</p>
+          </div>
+          <div class="pricing-card-footer">
+            <div class="price">700 AED</div>
+            <a href="#booking" class="cta-btn">Reserve Now <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Pricing Card -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Monthly Driver</h3>
+            <span class="badge">Popular</span>
+          </div>
+          <div class="pricing-card-body">
+            <p>School Pick up and drop off service 5 days a week, 6 hours a day.</p>
+            <ul class="key-benefits">
+              <li><i class="fa-solid fa-check"></i> Drivers know all routes in Dubai</li>
+              <li><i class="fa-solid fa-check"></i> Affordability, no shocking costs</li>
+              <li><i class="fa-solid fa-check"></i> Loyalty & Value</li>
+              <li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+            </ul>
+            <p class="note">NOTE: Extra 30 AED/Hour if it takes extra time</p>
+          </div>
+          <div class="pricing-card-footer">
+            <div class="price">3500 AED</div>
+            <a href="#booking" class="cta-btn">Reserve Now <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Pricing Card -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Golden Packages </h3>
+            <span class="badge">Popular</span>
+          </div>
+          <div class="pricing-card-body">
+            <p>Hire and book driver 6 days in a week and 10 to 13 hours in a day.</p>
+            <ul class="key-benefits">
+              <li><i class="fa-solid fa-check"></i> Drivers know all routes in Dubai</li>
+              <li><i class="fa-solid fa-check"></i> Affordability, no shocking costs</li>
+              <li><i class="fa-solid fa-check"></i> Loyalty & Value</li>
+              <li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+            </ul>
+            <p class="note">NOTE: Extra 30 AED/Hour if it takes extra time</p>
+          </div>
+          <div class="pricing-card-footer">
+            <div class="price">5000 AED</div>
+            <a href="#booking" class="cta-btn">Reserve Now <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Vip Packages -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Vip Packages</h3>
+            <span class="badge">Recommended</span>
+          </div>
+          <div class="pricing-card-body">
+            <p>Hire and book driver 6 days in a week and 8 to 10 hours in a day.</p>
+            <ul class="key-benefits">
+              <li><i class="fa-solid fa-check"></i> Drivers know all routes in Dubai</li>
+              <li><i class="fa-solid fa-check"></i> Affordability, no shocking costs</li>
+              <li><i class="fa-solid fa-check"></i> Loyalty & Value</li>
+              <li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+            </ul>
+            <p class="note">NOTE: Extra 30 AED/Hour if it takes extra time</p>
+          </div>
+          <div class="pricing-card-footer">
+            <div class="price">4500 AED</div>
+            <a href="#booking" class="cta-btn">Reserve Now <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Add 5 more packages here -->
+        
+      </div>
+    </div>
+
+    <div class="pricing-dots"></div>
+  </div>
+</section>
+
+
+
+<!-- =================================================================== -->
+<!-- Cost Calculator section  -->
+<section class="cost-calculator">
+  <div class="container calculator-inner">
+    
+    <!-- Left: Form -->
+    <div class="calc-form">
+      <h2>Cost Calculator</h2>
+      <p>Estimate your trip cost from Dubai to other cities.</p>
+
+      <form id="tripCalculator">
+        <div class="form-group">
+          <label for="pickup">Pickup City</label>
+          <select id="pickup" required>
+            <option value="Dubai" selected>Dubai</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Destination City</label>
+          <select id="destination" required>
+            <option value="" disabled>Select City</option>
+            <option value="Abu Dhabi" data-price="250" selected>Abu Dhabi</option>
+            <option value="Sharjah" data-price="100">Sharjah</option>
+            <option value="Ajman" data-price="120">Ajman</option>
+            <option value="Fujairah" data-price="400">Fujairah</option>
+            <option value="Ras Al Khaimah" data-price="350">Ras Al Khaimah</option>
+            <option value="Al Ain" data-price="300">Al Ain</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="carType">Car Type</label>
+          <select id="carType" required>
+            <option value="" disabled>Select Car Type</option>
+            <option value="rangeRover" data-multiplier="1" selected>Range Rover with Driver</option>
+            <option value="corolla" data-multiplier="1.5">Toyota Corolla with Driver</option>
+            <option value="attrage" data-multiplier="1.8">Attrage with Driver</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-outline">Calculate Cost</button>
+      </form>
+    </div>
+
+    <!-- Right: Result -->
+    <div class="calc-result">
+      <div class="price-box">
+      <h3>Your Estimated Cost</h3>
+        <span id="calculatedPrice">Select options to calculate</span>
+        <!-- Dynamic Car Image -->
+        <div class="car-image">
+          <img id="carPreview" src="assets/img/placeholder-car.png" alt="Car Preview">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="assets/js/home-slider.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#hamburger").click(function(){
+            $(".mobile-menu").toggle();
+            $(this).toggleClass("fa-bars fa-xmark");
+        });
+        $(".mob-dropdown-menu").hide();
+        $(".mob-dropdown").click(function(){
+            $(".mob-dropdown-menu").toggle();
+        });
+        
+    });
+</script>
+
+
+</body>
+</html>
