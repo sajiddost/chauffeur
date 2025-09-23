@@ -158,3 +158,43 @@ $(document).ready(function(){
   // Also run once when the page loads
   calculateCost();
 });
+
+
+
+//  OUR FLEETS 
+
+$(document).ready(function(){
+  function animateFleetCards() {
+    $('.fleet-card').each(function(i){
+      let card = $(this);
+      if (card.offset().top < $(window).scrollTop() + $(window).height() - 50) {
+        setTimeout(function(){
+          card.addClass('visible');
+        }, i * 200); // staggered effect
+      }
+    });
+  }
+
+  $(window).on('scroll load', animateFleetCards);
+});
+
+
+// Explore Our Driver Services Dubai 
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".service-card");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+

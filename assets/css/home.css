@@ -11,7 +11,7 @@
   position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 50px 0px;
   /* height: 450px; */
 }
 
@@ -649,3 +649,197 @@
   }
 }
 
+
+/* =========================
+   FLEET PRICING SECTION
+========================= */
+.fleet-pricing {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.fleet-pricing .section-title {
+  margin-bottom: 50px;
+  color: var(--lux-black);
+  font-family: 'Lora', serif;
+}
+
+.fleet-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.fleet-card {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.fleet-card::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 0 1000px; 
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: var(--lux-gold);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.fleet-card:hover::before{
+    content: '';
+    width: 700px;
+    height: 700px;
+    top: 0px;
+    right: 0px;
+    opacity: 0.1;
+}
+
+.fleet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: var(--lux-gold);
+}
+
+.fleet-card img {
+  max-width: 200px;
+  margin: 0 auto 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.fleet-card:hover img {
+  transform: scale(1.05);
+}
+
+.fleet-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--lux-black);
+}
+
+.price-list {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.price-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--lux-black);
+}
+
+.fleet-card .btn-outline {
+  margin-top: auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .fleet-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fleet-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* =========================
+   DRIVER SERVICES SECTION
+========================= */
+.driver-services {
+  background: #121212; /* dark background */
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.driver-services .section-title {
+  margin-bottom: 50px;
+  color: #f9c744; /* golden accent */
+  font-family: 'Lora', serif;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #1e1e1e;
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card img.service-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  border-radius: 100px;
+  border: 2px solid #fff;
+}
+
+.service-card:hover img.service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+.service-card:hover {
+  background: #252525;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Fade-in effect when visible */
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-in-out;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
