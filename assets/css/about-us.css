@@ -1,0 +1,221 @@
+.hero-banner {
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 100%),
+    url('../img/VIP-Chauffeur.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+
+/* Chauffeur Services Section  */
+.chauffeur-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.chauffeur-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 40px;
+}
+
+.chauffeur-content h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.chauffeur-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.chauffeur-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.chauffeur-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.chauffeur-list li i {
+  color: var(--lux-gold, #d4af37);
+  margin-right: 12px;
+  font-size: 1.2rem;
+  opacity: 1;
+  transform: translateX(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.chauffeur-list li:hover i {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.chauffeur-image img {
+  width: 100%;
+  border-radius: 15px;
+  /* box-shadow: 0 6px 18px rgba(0,0,0,0.1); */
+  transition: transform 0.4s ease-in-out;
+}
+
+.chauffeur-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile: 1 card */
+@media screen and (max-width: 767px) {
+  .chauffeur-section{
+    padding-top: 20px;
+  }
+}
+
+
+.mission-goal {
+  background: linear-gradient(180deg, #111, #222);
+  color: #f5f5f5;
+  padding: 80px 20px;
+}
+
+.mission-goal .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #fff; /* golden highlight */
+  position: relative;
+}
+
+.mission-goal-content {
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 40px;
+}
+
+.mission-box, .goal-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-box:hover, .goal-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.6);
+}
+
+.mission-box h3, .goal-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.mission-box p, .goal-box p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mission-goal-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--lux-gold, #d0a741), #000);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle,
+    #a67c00 0%,     /* deep golden brown */
+    #d4af37 30%,    /* metallic gold */
+    #ffd700 60%,    /* bright gold */
+    #fff8dc 90%     /* light champagne gold */
+  );
+  opacity: 0.15; /* subtle effect */
+  animation: pulseBG 10s infinite linear;
+}
+
+
+@keyframes pulseBG {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: var(--lux-gold, #d0a741);
+  color: #fff;
+}
+
+.cta-btn:hover i {
+  transform: translateX(5px);
+}
+

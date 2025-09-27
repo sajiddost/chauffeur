@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   let currentSlide = 0;
   const slides = $(".slide");
@@ -31,10 +30,7 @@ $(document).ready(function(){
     showSlide(currentSlide);
   });
 
-  // Auto play
-  setInterval(function(){
-    $(".next").click();
-  }, 10000);
+  
 });
 
 
@@ -149,15 +145,24 @@ $(document).ready(function(){
     }
   }
 
-  // Trigger calculation on form submit
+  // Trigger calculation on form submit + redirect
   $("#tripCalculator").on("submit", function(e){
     e.preventDefault();
     calculateCost();
+
+    // Smooth scroll to .price-box section
+    $("html, body").animate(
+      {
+        scrollTop: $(".price-box").offset().top - 50
+      },
+      800
+    );
   });
 
   // Also run once when the page loads
   calculateCost();
 });
+
 
 
 

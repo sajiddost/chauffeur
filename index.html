@@ -25,14 +25,14 @@
           <li class="dropdown">
             <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> VIP Chauffeur</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Dubai City Tour</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Hourly Driver</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Monthly Driver</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Corporate Driver</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Inter Emitrates Travel</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> School Pickup & Drop off</a></li>
-              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Airport Pickup & Drop off</a></li>
+              <li><a href="vip-chauffeur.html"><i class="fa-solid fa-chevron-right"></i> VIP Chauffeur</a></li>
+              <li><a href="dubai-city-tour.html"><i class="fa-solid fa-chevron-right"></i> Dubai City Tour</a></li>
+              <li><a href="hourly-driver.html"><i class="fa-solid fa-chevron-right"></i> Hourly Driver</a></li>
+              <li><a href="monthly-driver.html"><i class="fa-solid fa-chevron-right"></i> Monthly Driver</a></li>
+              <li><a href="corporate-personal-driver.html"><i class="fa-solid fa-chevron-right"></i> Corporate Driver</a></li>
+              <li><a href="inter-emirates-travel.html"><i class="fa-solid fa-chevron-right"></i> Inter Emitrates Travel</a></li>
+              <li><a href="school-pickup-drop-off.html"><i class="fa-solid fa-chevron-right"></i> School Pickup & Drop off</a></li>
+              <li><a href="airport-pickup-dropoff.html"><i class="fa-solid fa-chevron-right"></i> Airport Pickup & Drop off</a></li>
             </ul>
           </li>
 
@@ -49,7 +49,7 @@
       <!-- Right Side: Phone + Button -->
       <div class="lux-right">
         <a href="tel:+971 52 295 0066" class="phone"><i class="fa-solid fa-phone"></i> <span>+971</span> 52 295 0066</a>
-        <button class="btn-outline">Book Now</button>
+        <a href="https://api.whatsapp.com/send/?phone=971522950066" class="btn-outline">Book Now</a>
       </div>
 
       <div class="mobile-nav">
@@ -612,12 +612,12 @@ In Dubai or Abu Dhabi, it is easy to hire a car with a driver at low prices at l
       <h3>Contact Us</h3>
       <ul class="contact-info">
         <li><i class="fa-solid fa-phone"></i> +971 52 295 0066</li>
-        <li><i class="fa-solid fa-envelope"></i> info@chauffeursnow.ae</li>
-        <li><i class="fa-solid fa-location-dot"></i> Dubai, United Arab Emirates</li>
+        <li><i class="fa-solid fa-envelope"></i> Chauffeursnow@gmail.com</li>
+        <li><i class="fa-solid fa-location-dot"></i> Rigga Business Center, 28 We, 26b St, Deira, Dubai</li>
       </ul>
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/chauffeursnowvehicles/"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
@@ -634,18 +634,33 @@ In Dubai or Abu Dhabi, it is easy to hire a car with a driver at low prices at l
 
 <script src="assets/js/home-slider.js"></script>
 <script>
-    $(document).ready(function(){
-        $("#hamburger").click(function(){
-            $(".mobile-menu").toggle();
-            $(this).toggleClass("fa-bars fa-xmark");
-        });
-        $(".mob-dropdown-menu").hide();
-        $(".mob-dropdown").click(function(){
-            $(".mob-dropdown-menu").toggle();
-        });
-        
+  $(document).ready(function () {
+    // Toggle hamburger menu
+    $("#hamburger").click(function (e) {
+      e.stopPropagation(); // Prevent click from bubbling up
+      $(".mobile-menu").stop(true, true).slideToggle(300);
+      $(this).toggleClass("fa-bars fa-xmark");
     });
+
+    // Dropdown inside mobile menu
+    $(".mob-dropdown-menu").hide();
+    $(".mob-dropdown").click(function (e) {
+      e.stopPropagation();
+      $(this).find(".mob-dropdown-menu").stop(true, true).slideToggle(200);
+    });
+
+    // Close menu if clicked outside
+    $(document).click(function (e) {
+      if (!$(e.target).closest(".mobile-menu, #hamburger").length) {
+        if ($(".mobile-menu").is(":visible")) {
+          $(".mobile-menu").slideUp(300);
+          $("#hamburger").removeClass("fa-xmark").addClass("fa-bars");
+        }
+      }
+    });
+  });
 </script>
+
 
 
 </body>

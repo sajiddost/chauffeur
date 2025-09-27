@@ -1,0 +1,207 @@
+.hero-banner {
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 100%),
+    url('../img/VIP-Chauffeur.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+.hero-content{
+    width: 800px;
+    margin: auto;
+}
+
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--lux-gold, #d0a741), #000);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle,
+    #a67c00 0%,     /* deep golden brown */
+    #d4af37 30%,    /* metallic gold */
+    #ffd700 60%,    /* bright gold */
+    #fff8dc 90%     /* light champagne gold */
+  );
+  opacity: 0.15; /* subtle effect */
+  animation: pulseBG 10s infinite linear;
+}
+
+
+@keyframes pulseBG {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: var(--lux-gold, #d0a741);
+  color: #fff;
+}
+
+.cta-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Contact Info (White Theme) */
+.contact-info {
+  background: #fff;
+  padding: 80px 20px;
+}
+.contact-info .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.info-box {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.info-box:hover {
+  transform: translateY(-10px);
+}
+.info-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #d4af37;
+}
+.info-box p, .info-box a {
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Contact Form (Dark Theme) */
+.contact-form-section {
+  background: linear-gradient(180deg, #1a1a1a, #111);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact-form-section .section-title {
+  color: #d4af37;
+  margin-bottom: 40px;
+}
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #aaa;
+}
+.btn-submit {
+  background: #d4af37;
+  color: #111;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn-submit:hover {
+  background: #b58e2d;
+}
+
+/* Map Section (White Theme) */
+.contact-map {
+  background: #fff;
+  padding: 80px 20px;
+}
+.contact-map .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}
+.contact-us-page i{
+    width: 50px;
+    /* height: 50px; */
+    color: #fff;
+    background: var(--lux-gold);
+    padding: 16px;
+    border-radius: 100px;
+}
